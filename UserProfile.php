@@ -23,25 +23,9 @@
     <header id="header " class="header">                          
         <nav id="main-nav" class="main-nav navbar navbar-expand-md bg-primary ">
             <div class="container-fluid text-white">
-            <a class="navbar-brand logo scrollto" href="#promo">
+            <a class="navbar-brand logo scrollto" href="LandingPage.html">
                 <span class="logo-title text-white">VolunteerConnect</span>
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse"  aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button><!--//nav-toggle-->
-                       
-            <div class="navbar-collapse collapse" id="navbar-collapse">
-                <ul id="nav-menu" class="nav navbar-nav ms-md-auto text-white">
-                    <li class="nav-item sr-only"><a class="nav-link scrollto text-white" href="#promo">Home</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto text-white" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto text-white" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto text-white" href="#docs">Docs</a></li>
-                    <li class="nav-item"><a class="nav-link scrollto text-white" href="#license">License</a></li>                        
-                    <li class="nav-item last"><a class="nav-link scrollto text-white" href="#contact">Contact</a></li>
-                </ul><!--//nav-->
             </div><!--//navabr-collapse-->
             </div>
         </nav><!--//main-nav-->
@@ -55,7 +39,7 @@
         $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
         while( $record = mysqli_fetch_assoc($resultset) ) {
         ?>
-        <div class="card hovercard p-5 w-50 border-0">
+        <div class="card hovercard p-5 w-50 border-0 shadow-sm">
             <div class="cardheader">               
                 <div class="avatar">
                     <img alt="assume image here" src="<?php echo $record['Event_image']; ?>" style="width:180px">
@@ -71,7 +55,7 @@
                 <div class="desc">Organized by: <?php echo $record['Event_organizer_name']; ?></div>	  				
             </div>
             <form class="" method="post">
-                <button type=submit class="bg-primary text-white border-0 p-2 rounded-2">I'm intrested</button>
+                <button type=submit class="bg-primary text-white border-0 p-2 rounded-2">I'm interested</button>
                 <?php
                 if(isset($_POST))
                 {
