@@ -54,7 +54,7 @@
   <h1 style="position: absolute; top: 350px;left: 350px; color: beige;">We connect you with good volunteers to help<br>you with your good cause</h1> 
   </div >
   <div class="justify-content-center d-flex">
-  <button class="bg-primary border-0 w-25 p-3 m-3 text-white rounded-2"><a class="text-white" href="">Create Event</a></button>
+  <button class="bg-primary border-0 w-25 p-3 m-3 text-white rounded-2"><a class="text-white" href="newpost.html">Create Event</a></button>
   </div>
   <!--cards-->
   <div class="card-deck row">
@@ -85,8 +85,7 @@
               <ul>
               <?php
               include_once("connect.php");
-              //$curr=$record['Event_name'];
-              $curr="Donation Drive for v";
+              $curr=$record['Event_name'];
               $sql = "SELECT user_name FROM interested_users where Event_name='$curr';";
               $resultset2 = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
               while( $record2 = mysqli_fetch_assoc($resultset2) ) {

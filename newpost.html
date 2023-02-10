@@ -5,12 +5,12 @@
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="newpost.css">
         <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
-
+        <link rel="shortcut icon" href="VClogo.png">  
     </head>
     <body>
       <div class="row">
     <div class="col-md-12">
-      <form action="index.html" method="post">
+      <form action="Create_post.php" method="post">
         <h1> Hire Volunteers </h1>
         
         <fieldset>
@@ -29,21 +29,11 @@
            
          <label for="Event_description">Event Description:</label>
          <textarea id="desc" name="Event_description"  rows="4" cols="50"></textarea>
-       
+          
+         <label for="Event_image">Event Image:</label>
+        <input type="file" id="Image" name="Image" accept="image/*">
           
         </fieldset>
-        <fieldset>  
-        
-          <legend><span class="number">2</span> Organisation Info</legend>
-          
-          <label for="Event_organizer_name">Organisation Name:</label>
-          <input type="text" id="name"  name="Event_organizer_name">
-
-          <label for="Volunteers_required">No. of Volunteers Required: </label>
-          <input type="number" id="Location" name="Volunteers_required">
-       
-         
-       
         <button type="submit">Sign Up</button>
         
        </form>
