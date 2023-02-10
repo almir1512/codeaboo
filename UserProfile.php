@@ -60,7 +60,8 @@
                 if(isset($_POST))
                 {
                     $curr=$record['Event_name'];
-                    $sql="Insert into interested_users (Event_name,user_name) values ('$curr','username')";
+                    $user=$_SESSION['name'];
+                    $sql="Insert into interested_users (Event_name,user_name) values ('$curr','$user')";
                     mysqli_query($conn, $sql);
                 }
                 ?>
