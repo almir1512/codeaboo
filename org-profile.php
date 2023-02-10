@@ -40,7 +40,7 @@
     <header id="header " class="header">                          
         <nav id="main-nav" class="main-nav navbar navbar-expand-md bg-primary ">
             <div class="container-fluid text-white">
-            <a class="navbar-brand logo scrollto" href="#promo">
+            <a class="navbar-brand logo scrollto" href="LandingPage.html">
                 <span class="logo-title text-white">VolunteerConnect</span>
             </a>
             
@@ -54,7 +54,7 @@
   <h1 style="position: absolute; top: 350px;left: 350px; color: beige;">We connect you with good volunteers to help<br>you with your good cause</h1> 
   </div >
   <div class="justify-content-center d-flex">
-  <button class="bg-primary border-0 w-25 p-3 m-3 text-white rounded-2"><a class="text-white" href="newpost.html">Create Event</a></button>
+  <button class="bg-primary border-0 w-25 p-3 m-3 text-white rounded-2"  onclick="window.location.href = 'newpost.html';">Create Event</button>
   </div>
   <!--cards-->
   <div class="card-deck row">
