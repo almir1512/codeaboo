@@ -47,14 +47,14 @@
         </nav><!--//main-nav-->
     </header>
     <!--cards:-->
-    <div>
+    <form class="" method="POST">
     <?php
 	include_once("connect.php");
     $sql = "SELECT id, Event_name, Event_location, Event_date, Event_organizer_name, Event_description, Volunteers_required, Volunteers_ready, Event_image FROM org_event_post";
     $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));			
     while( $record = mysqli_fetch_assoc($resultset) ) {
     ?>
-    <div class="card hovercard p-5 w-50">
+    <div class="card hovercard p-5 w-50 border-0">
     <div class="cardheader">               
         <div class="avatar">
             <img alt="assume image here" src="<?php echo $record['Event_image']; ?>" style="width:180px">
@@ -62,14 +62,22 @@
         </div>
     <div class="card-body info">
         <div class="title">
-            <h1><?php echo $record['Event_name']; ?></h1>
+            <h3 class="text-secondary"><?php echo $record['Event_name']; ?></h3>
         </div>
         <div class="desc"> <a target="_blank" href="<?php echo $record['Event_location']; ?>"></a></div>		
         <div class="desc"><?php echo $record['Event_description']; ?></div>	    
-        <div class="desc"><?php echo $record['Event_date']; ?></div>    
-        <div class="desc"><?php echo $record['Event_organizer_name']; ?></div>	  				
+        <div class="desc">Date: <?php echo $record['Event_date']; ?></div>    
+        <div class="desc">Organized by: <?php echo $record['Event_organizer_name']; ?></div>	  				
         </div>
-    </div>
+        <button type=submit class="bg-primary text-white border-0 p-2 rounded-2">I'm intrested</button>
+            <?php
+            if(isset($_POST))
+            {
+                $sql="Insert into interested_users ";
+                mysqli_query($conn, $sql);
+            }
+            ?>
+    </form>
     <?php } 
     ?>
     </div>
